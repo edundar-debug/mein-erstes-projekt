@@ -14,3 +14,15 @@ geburtsjahr_text = input("In welchem Jahr sind Sie geboren? ")
 geburtsjahr = int(geburtsjahr_text)
 alter = 2026 - geburtsjahr 
 print(f"Du bist oder wirst dieses Jahr {alter} Jahre alt!")
+
+
+destination = input("Was ist ihr Ziel?")
+print(f"Also {destination}, das ist ein schönes Ziel!")
+
+
+start_price = 6.65
+km = int(input("Bitte Kilometer eingeben: "))
+if km > 5:  costs = 2.3
+else:   costs = 2.5
+total_expenses = start_price + costs * km
+print("Das macht dann einen preis von:", total_expenses)
