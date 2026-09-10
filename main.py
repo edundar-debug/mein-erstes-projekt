@@ -1,28 +1,12 @@
-import datetime
+# 
+# Multi-Tarif Taximeter
+km = 12
 
-name = input("Wie heißt du? ")
-print(f"Hallo {name}! Willkommen in VS Code. Dein Mac-Setup steht!")
+if km <= 3:  
+    cost = 5.0  #Kurzstrecke
+elif km <= 10:  
+    cost = 5.0 * (km - 3) * 2.0  #Normaltarif
+else:   
+    cost = 19.0 * (km - 10) *1.5  #Langstrecke (Günstigerer KM-Preis)
 
-heute = datetime.date.today()
-semesterstart = datetime.date(2026, 10, 1)
-tage_uebrig = (semesterstart - heute).days
-
-print(f"Es sind noch genau {tage_uebrig} Tage bis zum Semesterstart in Bielefeld!")
-
-
-geburtsjahr_text = input("In welchem Jahr sind Sie geboren? ")
-geburtsjahr = int(geburtsjahr_text)
-alter = 2026 - geburtsjahr 
-print(f"Du bist oder wirst dieses Jahr {alter} Jahre alt!")
-
-
-destination = input("Was ist ihr Ziel?")
-print(f"Also {destination}, das ist ein schönes Ziel!")
-
-
-start_price = 6.65
-km = int(input("Bitte Kilometer eingeben: "))
-if km > 5:  costs = 2.3
-else:   costs = 2.5
-total_expenses = start_price + costs * km
-print("Das macht dann einen preis von:", total_expenses)
+print(f"Fahrpreis für {km} km: {cost} Euro")
